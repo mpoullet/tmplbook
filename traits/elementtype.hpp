@@ -1,7 +1,7 @@
 #include <vector>
 #include <list>
 
-template<typename T> 
+template<typename T>
 struct ElementT;                  // primary template
 
 template<typename T>

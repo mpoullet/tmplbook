@@ -26,7 +26,7 @@ class NonCopyable
   NonCopyable& operator= (NonCopyable&&) = default;
 };
 
-int main() 
+int main()
 {
   Variant<int, NonCopyable> v(17);
   try {

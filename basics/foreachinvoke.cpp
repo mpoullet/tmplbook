@@ -21,7 +21,7 @@ int main()
             std::cout << prefix << i << '\n';
           },
           "- value: ");                          // 1st arg of lambda
-    
+
   // call obj.memfunc() for/with each elements in primes passed as argument
   MyClass obj;
   foreach(primes.begin(), primes.end(),  // elements used as args

@@ -12,7 +12,7 @@ void valuelisttest()
 
   using SortedIntegers = InsertionSort<Integers, GreaterThanT>;
 
-  static_assert(std::is_same_v<SortedIntegers, 
+  static_assert(std::is_same_v<SortedIntegers,
                                Valuelist<int, 9, 7, 6, 5, 4, 2, 2, 1>>,
                 "insertion sort failed");
 }

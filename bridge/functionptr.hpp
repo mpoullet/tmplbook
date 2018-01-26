@@ -1,9 +1,9 @@
 // primary template:
-template<typename Signature> 
+template<typename Signature>
 class FunctionPtr;
 
 // partial specialization:
-template<typename R, typename... Args> 
+template<typename R, typename... Args>
 class FunctionPtr<R(Args...)>
 {
  private:
@@ -13,8 +13,8 @@ class FunctionPtr<R(Args...)>
   FunctionPtr() : bridge(nullptr) {
   }
   FunctionPtr(FunctionPtr const& other);    // see functionptr-cpinv.hpp
-  FunctionPtr(FunctionPtr& other) 
-    : FunctionPtr(static_cast<FunctionPtr const&>(other)) { 
+  FunctionPtr(FunctionPtr& other)
+    : FunctionPtr(static_cast<FunctionPtr const&>(other)) {
   }
   FunctionPtr(FunctionPtr&& other) : bridge(other.bridge) {
     other.bridge = nullptr;
@@ -42,8 +42,8 @@ class FunctionPtr<R(Args...)>
   }
 
   // destructor:
-  ~FunctionPtr() { 
-    delete bridge; 
+  ~FunctionPtr() {
+    delete bridge;
   }
 
   friend void swap(FunctionPtr& fp1, FunctionPtr& fp2) {

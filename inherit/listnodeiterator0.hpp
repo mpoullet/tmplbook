@@ -4,7 +4,7 @@ class ListNodeIterator
                          std::forward_iterator_tag>
 {
   ListNode<T>* current = nullptr;
- public: 
+ public:
   T& dereference() const {
     return current->value;
   }

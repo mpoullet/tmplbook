@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-int main() 
+int main()
 {
   Variant<int, double, std::string> field(17);
   if (field.is<int>()) {
@@ -11,6 +11,6 @@ int main()
   }
   field = 42;      // assign value of same type
   field = "hello"; // assign value of different type
-  std::cout << "Field now stores the string \"" 
+  std::cout << "Field now stores the string \""
             << field.get<std::string>() << '\"' << std::endl;
 }

@@ -19,7 +19,7 @@ class Array {
     }
 
     // assignment operator for same type
-    Array& operator= (Array const& b) { 
+    Array& operator= (Array const& b) {
         assert(size()==b.size());
         for (std::size_t idx = 0; idx<b.size(); ++idx) {
             expr_rep[idx] = b[idx];
@@ -29,7 +29,7 @@ class Array {
 
     // assignment operator for arrays of different type
     template<typename T2, typename Rep2>
-    Array& operator= (Array<T2, Rep2> const& b) { 
+    Array& operator= (Array<T2, Rep2> const& b) {
         assert(size()==b.size());
         for (std::size_t idx = 0; idx<b.size(); ++idx) {
             expr_rep[idx] = b[idx];

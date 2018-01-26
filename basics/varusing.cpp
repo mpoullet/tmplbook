@@ -35,6 +35,6 @@ int main()
   using CustomerOP = Overloader<CustomerHash,CustomerEq>;
 
   std::unordered_set<Customer,CustomerHash,CustomerEq> coll1;
-  std::unordered_set<Customer,CustomerOP,CustomerOP> coll2;   
+  std::unordered_set<Customer,CustomerOP,CustomerOP> coll2;
   //...
 }

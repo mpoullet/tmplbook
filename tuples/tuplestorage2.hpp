@@ -18,15 +18,15 @@ class TupleElt
 
 // recursive case:
 template<typename Head, typename... Tail>
-class Tuple<Head, Tail...> 
+class Tuple<Head, Tail...>
  : private TupleElt<Head>, private Tuple<Tail...>
 {
  public:
-  Head& getHead() { 
+  Head& getHead() {
     // potentially ambiguous
     return static_cast<TupleElt<Head> *>(this)->get();
   }
-  Head const& getHead() const { 
+  Head const& getHead() const {
     // potentially ambiguous
     return static_cast<TupleElt<Head> const*>(this)->get();
   }

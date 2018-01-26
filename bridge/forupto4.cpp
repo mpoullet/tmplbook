@@ -12,7 +12,7 @@ void forUpTo(int n, FunctionPtr<void(int)> f)
 
 void printInt(int i)
 {
-  std::cout << i << ' ';  
+  std::cout << i << ' ';
 }
 
 int main()

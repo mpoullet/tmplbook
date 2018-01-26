@@ -6,7 +6,7 @@ int main()
    int i = 42;
    std::add_const<int>::type c = i;      // c is int const
    std::add_const_t<int> c14 = i;        // since C++14
-   static_assert(std::is_const<decltype(c)>::value, "c should be const"); 
+   static_assert(std::is_const<decltype(c)>::value, "c should be const");
 
    std::cout << std::boolalpha;
    std::cout << std::is_same<decltype(c), int const>::value  // true

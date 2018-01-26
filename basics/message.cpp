@@ -4,7 +4,7 @@ template<auto T>       // take value of any possible nontype parameter (since C+
 class Message {
   public:
     void print() {
-      std::cout << T << '\n'; 
+      std::cout << T << '\n';
     }
 };
 

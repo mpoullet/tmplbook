@@ -1,7 +1,7 @@
 #include "issame.hpp"
 #include <type_traits>  // defines true_type and false_type
 
-// helper to ignore any number of template parameters: 
+// helper to ignore any number of template parameters:
 template<typename...> using VoidT = void;
 
 // primary template:

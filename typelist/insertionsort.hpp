@@ -1,9 +1,9 @@
-template<typename List, 
+template<typename List,
          template<typename T, typename U> class Compare,
          bool = IsEmpty<List>::value>
 class InsertionSortT;
 
-template<typename List, 
+template<typename List,
          template<typename T, typename U> class Compare>
 using InsertionSort = typename InsertionSortT<List, Compare>::Type;
 

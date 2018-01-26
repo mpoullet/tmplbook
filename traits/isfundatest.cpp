@@ -10,10 +10,10 @@ void test (T const&)
     else {
         std::cout << "T is not a fundamental type" << '\n';
     }
-} 
+}
 
 int main()
 {
     test(7);
-    test("hello");    
+    test("hello");
 }

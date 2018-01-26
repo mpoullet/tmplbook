@@ -8,7 +8,7 @@ template<typename... Types>
 class Tuple;
 
 template<unsigned I, typename... Elements>
-auto get(Tuple<Elements...>& t) 
+auto get(Tuple<Elements...>& t)
   -> decltype(getHeight<sizeof...(Elements)-I-1>(t))
 {
   return getHeight<sizeof...(Elements)-I-1>(t);

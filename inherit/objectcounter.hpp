@@ -7,28 +7,28 @@ class ObjectCounter {
 
   protected:
     // default constructor
-    ObjectCounter() { 
+    ObjectCounter() {
         ++count;
     }
 
     // copy constructor
     ObjectCounter (ObjectCounter<CountedType> const&) {
-        ++count; 
+        ++count;
     }
 
     // move constructor
     ObjectCounter (ObjectCounter<CountedType> &&) {
-        ++count; 
+        ++count;
     }
 
     // destructor
-    ~ObjectCounter() { 
+    ~ObjectCounter() {
         --count;
     }
 
   public:
     // return number of existing objects:
-    static std::size_t live() { 
-        return count; 
+    static std::size_t live() {
+        return count;
     }
 };

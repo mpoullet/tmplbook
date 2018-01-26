@@ -6,9 +6,9 @@ auto applyImpl(F f, Tuple<Elements...> const& t,
   return f(get<Indices>(t)...);
 }
 
-template<typename F, typename... Elements, 
+template<typename F, typename... Elements,
          unsigned N = sizeof...(Elements)>
-auto apply(F f, Tuple<Elements...> const& t) 
+auto apply(F f, Tuple<Elements...> const& t)
   ->decltype(applyImpl(f, t, MakeIndexList<N>()))
 {
   return applyImpl(f, t, MakeIndexList<N>());

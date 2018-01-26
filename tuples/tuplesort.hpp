@@ -4,7 +4,7 @@ class MetafunOfNthElementT {
  public:
   template<typename T, typename U> class Apply;
 
-  template<unsigned N, unsigned M> 
+  template<unsigned N, unsigned M>
   class Apply<CTValue<unsigned, M>, CTValue<unsigned, N>>
     : public F<NthElement<List, M>, NthElement<List, N>> { };
 };
@@ -14,7 +14,7 @@ template<template<typename T, typename U> class Compare,
          typename... Elements>
 auto sort(Tuple<Elements...> const& t)
 {
-  return select(t, 
+  return select(t,
                 InsertionSort<MakeIndexList<sizeof...(Elements)>,
                               MetafunOfNthElementT<
                                          Tuple<Elements...>,

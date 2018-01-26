@@ -10,7 +10,7 @@ class Arr {
     }
     void print() const {
       for (int i=0; i<SZ; ++i) {  // loop over SZ elements
-        std::cout << elems[i] << ' ';  
+        std::cout << elems[i] << ' ';
       }
     }
 };

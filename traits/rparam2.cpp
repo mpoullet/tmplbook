@@ -11,7 +11,7 @@ void foo_core (typename RParam<T1>::Type p1,
 
 // wrapper to avoid explicit template parameter passing
 template<typename T1, typename T2>
-void foo (T1 && p1, T2 && p2) 
+void foo (T1 && p1, T2 && p2)
 {
     foo_core<T1,T2>(std::forward<T1>(p1),std::forward<T2>(p2));
 }

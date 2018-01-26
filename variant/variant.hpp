@@ -14,7 +14,7 @@ class Variant
 
   // see variantvisit.hpp:
   template<typename R = ComputedResultType, typename Visitor>
-    VisitResult<R, Visitor, Types&...> visit(Visitor&& vis) &; 
+    VisitResult<R, Visitor, Types&...> visit(Visitor&& vis) &;
   template<typename R = ComputedResultType, typename Visitor>
     VisitResult<R, Visitor, Types const&...> visit(Visitor&& vis) const&;
   template<typename R = ComputedResultType, typename Visitor>

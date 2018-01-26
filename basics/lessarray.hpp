@@ -1,4 +1,4 @@
-template<typename T, int N, int M> 
+template<typename T, int N, int M>
 bool less (T(&a)[N], T(&b)[M])
 {
     for (int i = 0; i<N && i<M; ++i) {

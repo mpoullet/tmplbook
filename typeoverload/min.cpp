@@ -15,17 +15,17 @@ struct BoolConvertible {
   operator bool() const { return true; }          // implicit conversion to bool
 };
 struct X5 { };
-BoolConvertible operator< (X5 const&, X5 const&) 
-{ 
-  return BoolConvertible(); 
+BoolConvertible operator< (X5 const&, X5 const&)
+{
+  return BoolConvertible();
 }
 @\vspace{-1ex}@
 struct NotBoolConvertible {                       // no conversion to bool
 };
 struct X6 { };
-NotBoolConvertible operator< (X6 const&, X6 const&) 
-{ 
-  return NotBoolConvertible(); 
+NotBoolConvertible operator< (X6 const&, X6 const&)
+{
+  return NotBoolConvertible();
 }
 @\vspace{-1ex}@
 struct BoolLike {
@@ -34,7 +34,7 @@ struct BoolLike {
 struct X7 { };
 BoolLike operator< (X7 const&, X7 const&) { return BoolLike(); }
 
-int main() 
+int main()
 {
   min(X1(), X1()); // X1 can be passed to min()
   min(X2(), X2()); // X2 can be passed to min()

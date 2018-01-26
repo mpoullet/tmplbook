@@ -16,7 +16,7 @@ class C {
     }
 };
 
-int main() 
+int main()
 {
     C x;
     C x2{x};             // prints: template constructor

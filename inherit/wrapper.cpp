@@ -1,7 +1,7 @@
 class S {
 };
 
-template<typename T> 
+template<typename T>
 class Wrapper {
   private:
     T object;
@@ -12,7 +12,7 @@ class Wrapper {
     }
 };
 
-int main() 
+int main()
 {
     S s;
     Wrapper<S> w(s);

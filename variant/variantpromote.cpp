@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-int main() 
+int main()
 {
   Variant<short, float, char const*> v1((short)123);
 

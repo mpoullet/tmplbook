@@ -5,14 +5,14 @@
 template<typename Iterator>
   constexpr bool IsInputIterator =
     IsConvertible<
-      typename std::iterator_traits<Iterator>::iterator_category,   
+      typename std::iterator_traits<Iterator>::iterator_category,
       std::input_iterator_tag>;
 
 template<typename T>
 class Container {
  public:
   // construct from an input iterator sequence:
-  template<typename Iterator, 
+  template<typename Iterator,
            typename = EnableIf<IsInputIterator<Iterator>>>
   Container(Iterator first, Iterator last);
 

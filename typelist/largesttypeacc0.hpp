@@ -1,12 +1,12 @@
 template<typename T, typename U>
-class LargerTypeT 
+class LargerTypeT
  : public IfThenElseT<sizeof(T) >= sizeof(U), T, U>
 {
 };
 
 template<typename Typelist>
 class LargestTypeAccT
- : public AccumulateT<PopFront<Typelist>, LargerTypeT, 
+ : public AccumulateT<PopFront<Typelist>, LargerTypeT,
                       Front<Typelist>>
 {
 };

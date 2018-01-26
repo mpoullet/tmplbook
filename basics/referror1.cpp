@@ -3,7 +3,7 @@ class RefMem {
   private:
     T zero;
   public:
-    RefMem() : zero{Z} { 
+    RefMem() : zero{Z} {
     }
 };
 

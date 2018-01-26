@@ -5,7 +5,7 @@ template<typename T>
 class HasDereference {
  private:
   template<typename U> struct Identity;
-  template<typename U> static std::true_type 
+  template<typename U> static std::true_type
     test(Identity<decltype(*std::declval<U>())>*);
   template<typename U> static std::false_type
     test(...);

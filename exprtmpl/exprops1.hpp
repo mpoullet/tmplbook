@@ -12,7 +12,7 @@ class A_Add {
     typename A_Traits<OP1>::ExprRef op1;    // first operand
     typename A_Traits<OP2>::ExprRef op2;    // second operand
 
-  public: 
+  public:
     // constructor initializes references to operands
     A_Add (OP1 const& a, OP2 const& b)
      : op1(a), op2(b) {

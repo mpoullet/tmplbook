@@ -3,7 +3,7 @@
 #include "ifthenelse.hpp"
 
 template<typename T>
-class IsReferenceT 
+class IsReferenceT
  : public IfThenElseT<IsLValueReferenceT<T>::value,
                       IsLValueReferenceT<T>,
                       IsRValueReferenceT<T>

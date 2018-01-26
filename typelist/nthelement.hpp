@@ -1,5 +1,5 @@
 // recursive case:
-template<typename List, unsigned N> 
+template<typename List, unsigned N>
 class NthElementT : public NthElementT<PopFront<List>, N-1>
 {
 };

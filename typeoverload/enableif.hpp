@@ -1,5 +1,5 @@
 template<bool, typename T = void>
-struct EnableIfT { 
+struct EnableIfT {
 };
 
 template<typename T>

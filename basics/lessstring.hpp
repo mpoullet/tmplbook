@@ -1,4 +1,4 @@
-template<int N, int M> 
+template<int N, int M>
 bool less (char const(&a)[N], char const(&b)[M])
 {
     for (int i = 0; i<N && i<M; ++i) {

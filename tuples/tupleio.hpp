@@ -1,12 +1,12 @@
 #include <iostream>
 
-void printTuple(std::ostream& strm, Tuple<> const&, bool isFirst = true) 
+void printTuple(std::ostream& strm, Tuple<> const&, bool isFirst = true)
 {
   strm << ( isFirst ? '(' : ')' );
 }
 
 template<typename Head, typename... Tail>
-void printTuple(std::ostream& strm, Tuple<Head, Tail...> const& t, 
+void printTuple(std::ostream& strm, Tuple<Head, Tail...> const& t,
                 bool isFirst = true)
 {
   strm << ( isFirst ? "(" : ", " );
