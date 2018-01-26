@@ -1,7 +1,7 @@
-void copycountertest()
-{
-  Tuple<CopyCounter<0>, CopyCounter<1>, CopyCounter<2>,
-        CopyCounter<3>, CopyCounter<4>> copies;
+void copycountertest() {
+  Tuple<CopyCounter<0>, CopyCounter<1>, CopyCounter<2>, CopyCounter<3>,
+        CopyCounter<4>>
+      copies;
   auto reversed = reverse(copies);
   std::cout << "0: " << CopyCounter<0>::numCopies << " copies\n";
   std::cout << "1: " << CopyCounter<1>::numCopies << " copies\n";

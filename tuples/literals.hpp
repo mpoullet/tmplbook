@@ -1,6 +1,6 @@
-#include "ctvalue.hpp"
 #include <cassert>
 #include <cstddef>
+#include "ctvalue.hpp"
 
 // convert single char to corresponding int value at compile time:
 constexpr int toInt(char c) {
@@ -17,23 +17,23 @@ constexpr int toInt(char c) {
 }
 
 // parse array of chars to corresponding int value at compile time:
-template<std::size_t N>
+template <std::size_t N>
 constexpr int parseInt(char const (&arr)[N]) {
-  int base = 10;       // to handle base (default: decimal)
-  int offset = 0;      // to skip prefixes like 0x
+  int base = 10;   // to handle base (default: decimal)
+  int offset = 0;  // to skip prefixes like 0x
   if (N > 2 && arr[0] == '0') {
     switch (arr[1]) {
-      case 'x':        // prefix 0x or 0X, so hexadecimal
+      case 'x':  // prefix 0x or 0X, so hexadecimal
       case 'X':
         base = 16;
         offset = 2;
         break;
-      case 'b':        // prefix 0b or 0B (since C++14), so binary
+      case 'b':  // prefix 0b or 0B (since C++14), so binary
       case 'B':
         base = 2;
         offset = 2;
         break;
-      default:         // prefix 0, so octal
+      default:  // prefix 0, so octal
         base = 8;
         offset = 1;
         break;
@@ -43,16 +43,18 @@ constexpr int parseInt(char const (&arr)[N]) {
   int value = 0;
   int multiplier = 1;
   for (std::size_t i = 0; i < N - offset; ++i) {
-    if (arr[N-1-i] != '\'') { // ignore separating single quotes (e.g. in 1'000)
-      value += toInt(arr[N-1-i]) * multiplier;
+    if (arr[N - 1 - i] !=
+        '\'') {  // ignore separating single quotes (e.g. in 1'000)
+      value += toInt(arr[N - 1 - i]) * multiplier;
       multiplier *= base;
     }
   }
   return value;
 }
 
-// literal operator: parse integral literals with suffix _c as sequence of chars:
-template<char... cs>
+// literal operator: parse integral literals with suffix _c as sequence of
+// chars:
+template <char... cs>
 constexpr auto operator"" _c() {
   return CTValue<int, parseInt<sizeof...(cs)>({cs...})>{};
 }

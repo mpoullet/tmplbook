@@ -1,14 +1,13 @@
-#include "stack3.hpp"
-#include <iostream>
 #include <deque>
+#include <iostream>
+#include "stack3.hpp"
 
-int main()
-{
+int main() {
   // stack of ints:
   Stack<int> intStack;
 
   // stack of doubles using a std::deque<> to manage the elements
-  Stack<double,std::deque<double>> dblStack;
+  Stack<double, std::deque<double>> dblStack;
 
   // manipulate int stack
   intStack.push(7);

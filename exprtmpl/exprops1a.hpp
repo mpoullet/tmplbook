@@ -2,18 +2,19 @@
 // - in general by reference
 // - for scalars by value
 
-template<typename T> class A_Scalar;
+template <typename T>
+class A_Scalar;
 
 // primary template
-template<typename T>
+template <typename T>
 class A_Traits {
-  public:
-    using ExprRef = T const&;     // type to refer to is constant reference
+ public:
+  using ExprRef = T const&;  // type to refer to is constant reference
 };
 
 // partial specialization for scalars
-template<typename T>
+template <typename T>
 class A_Traits<A_Scalar<T>> {
-  public:
-    using ExprRef = A_Scalar<T>;  // type to refer to is ordinary value
+ public:
+  using ExprRef = A_Scalar<T>;  // type to refer to is ordinary value
 };

@@ -1,43 +1,33 @@
-template<typename T>
+template <typename T>
 struct AccumulationTraits;
 
-template<>
+template <>
 struct AccumulationTraits<char> {
-    using AccT = int;
-    static constexpr AccT zero() {
-        return 0;
-    }
+  using AccT = int;
+  static constexpr AccT zero() { return 0; }
 };
 
-template<>
+template <>
 struct AccumulationTraits<short> {
-    using AccT = int;
-    static constexpr AccT zero() {
-        return 0;
-    }
+  using AccT = int;
+  static constexpr AccT zero() { return 0; }
 };
 
-template<>
+template <>
 struct AccumulationTraits<int> {
-    using AccT = long;
-    static constexpr AccT zero() {
-        return 0;
-    }
+  using AccT = long;
+  static constexpr AccT zero() { return 0; }
 };
 
-template<>
+template <>
 struct AccumulationTraits<unsigned int> {
-    using AccT = unsigned long;
-    static constexpr AccT zero() {
-        return 0;
-    }
+  using AccT = unsigned long;
+  static constexpr AccT zero() { return 0; }
 };
 
-template<>
+template <>
 struct AccumulationTraits<float> {
-    using AccT = double;
-    static constexpr AccT zero() {
-        return 0;
-    }
+  using AccT = double;
+  static constexpr AccT zero() { return 0; }
 };
 //...

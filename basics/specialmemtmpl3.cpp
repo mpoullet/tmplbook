@@ -1,7 +1,6 @@
 #include "specialmemtmpl3.hpp"
 
-int main()
-{
+int main() {
   std::string s = "sname";
   Person p1(s);              // init with string object => calls TMPL-CONSTR
   Person p2("tmp");          // init with string literal => calls TMPL-CONSTR

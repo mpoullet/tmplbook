@@ -1,9 +1,9 @@
-template<typename List>
+template <typename List>
 struct IsEmpty {
   static constexpr bool value = false;
 };
 
-template<>
+template <>
 struct IsEmpty<Nil> {
   static constexpr bool value = true;
 };

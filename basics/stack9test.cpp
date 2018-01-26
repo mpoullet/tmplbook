@@ -1,11 +1,10 @@
-#include "stack9.hpp"
 #include <iostream>
 #include <vector>
+#include "stack9.hpp"
 
-int main()
-{
-  Stack<int>   iStack;     // stack of ints
-  Stack<float> fStack;     // stack of floats
+int main() {
+  Stack<int> iStack;    // stack of ints
+  Stack<float> fStack;  // stack of floats
 
   // manipulate int stack
   iStack.push(1);
@@ -29,7 +28,7 @@ int main()
 
   vStack = fStack;
   std::cout << "vStack: ";
-  while (! vStack.empty()) {
+  while (!vStack.empty()) {
     std::cout << vStack.top() << ' ';
     vStack.pop();
   }

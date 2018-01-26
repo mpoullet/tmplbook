@@ -1,9 +1,8 @@
-#include "variant-all.hpp"
 #include <iostream>
 #include <string>
+#include "variant-all.hpp"
 
-int main()
-{
+int main() {
   Variant<short, float, char const*> v1((short)123);
 
   Variant<int, std::string, double> v2(v1);

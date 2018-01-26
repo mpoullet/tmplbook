@@ -1,4 +1,2 @@
-template<typename... Elements>
-class Typelist
-{
-};
+template <typename... Elements>
+class Typelist {};

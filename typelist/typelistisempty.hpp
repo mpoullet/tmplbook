@@ -1,11 +1,10 @@
-template<typename List>
-class IsEmpty
-{
+template <typename List>
+class IsEmpty {
  public:
   static constexpr bool value = false;
 };
 
-template<>
+template <>
 class IsEmpty<Typelist<>> {
  public:
   static constexpr bool value = true;

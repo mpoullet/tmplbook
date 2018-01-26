@@ -1,11 +1,10 @@
+#include "stackauto.hpp"
 #include <iostream>
 #include <string>
-#include "stackauto.hpp"
 
-int main()
-{
-  Stack<int,20u>        int20Stack;     // stack of up to 20 ints
-  Stack<std::string,40> stringStack;    // stack of up to 40 strings
+int main() {
+  Stack<int, 20u> int20Stack;          // stack of up to 20 ints
+  Stack<std::string, 40> stringStack;  // stack of up to 40 strings
 
   // manipulate stack of up to 20 ints
   int20Stack.push(7);

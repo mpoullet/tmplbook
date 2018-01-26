@@ -2,7 +2,7 @@
 #define MYFIRST_HPP
 
 // declaration of template
-template<typename T>
-void printTypeof (T const&);
+template <typename T>
+void printTypeof(T const&);
 
-#endif // MYFIRST_HPP
+#endif  // MYFIRST_HPP

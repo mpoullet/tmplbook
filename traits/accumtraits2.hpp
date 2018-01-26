@@ -1,27 +1,27 @@
-template<typename T>
+template <typename T>
 struct AccumulationTraits;
 
-template<>
+template <>
 struct AccumulationTraits<char> {
-    using AccT = int;
+  using AccT = int;
 };
 
-template<>
+template <>
 struct AccumulationTraits<short> {
-    using AccT = int;
+  using AccT = int;
 };
 
-template<>
+template <>
 struct AccumulationTraits<int> {
-    using AccT = long;
+  using AccT = long;
 };
 
-template<>
+template <>
 struct AccumulationTraits<unsigned int> {
-    using AccT = unsigned long;
+  using AccT = unsigned long;
 };
 
-template<>
+template <>
 struct AccumulationTraits<float> {
-    using AccT = double;
+  using AccT = double;
 };

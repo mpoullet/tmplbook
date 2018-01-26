@@ -1,20 +1,18 @@
-template<typename... Types>
+template <typename... Types>
 class Tuple;
 
 // recursive case:
-template<typename Head, typename... Tail>
-class Tuple<Head, Tail...>
-{
+template <typename Head, typename... Tail>
+class Tuple<Head, Tail...> {
  private:
   Head head;
   Tuple<Tail...> tail;
+
  public:
   // constructors:
-  Tuple() {
-  }
+  Tuple() {}
   Tuple(Head const& head, Tuple<Tail...> const& tail)
-    : head(head), tail(tail) {
-  }
+      : head(head), tail(tail) {}
   //...
 
   Head& getHead() { return head; }
@@ -24,7 +22,7 @@ class Tuple<Head, Tail...>
 };
 
 // basis case:
-template<>
+template <>
 class Tuple<> {
   // no storage required
 };

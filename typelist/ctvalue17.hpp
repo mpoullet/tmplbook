@@ -1,5 +1,4 @@
-template<auto Value>
-struct CTValue
-{
+template <auto Value>
+struct CTValue {
   static constexpr auto value = Value;
 };

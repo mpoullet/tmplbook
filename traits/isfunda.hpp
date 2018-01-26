@@ -2,14 +2,13 @@
 #include <type_traits>  // for true_type, false_type, and bool_constant<>
 
 // primary template: in general T is not a fundamental type
-template<typename T>
-struct IsFundaT : std::false_type {
-};
+template <typename T>
+struct IsFundaT : std::false_type {};
 
 // macro to specialize for fundamental types
-#define MK_FUNDA_TYPE(T)                             \
-   template<> struct IsFundaT<T> : std::true_type {  \
-   };
+#define MK_FUNDA_TYPE(T) \
+  template <>            \
+  struct IsFundaT<T> : std::true_type {};
 
 MK_FUNDA_TYPE(void)
 

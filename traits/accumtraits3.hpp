@@ -1,21 +1,21 @@
-template<typename T>
+template <typename T>
 struct AccumulationTraits;
 
-template<>
+template <>
 struct AccumulationTraits<char> {
-    using AccT = int;
-    static AccT const zero = 0;
+  using AccT = int;
+  static AccT const zero = 0;
 };
 
-template<>
+template <>
 struct AccumulationTraits<short> {
-    using AccT = int;
-    static AccT const zero = 0;
+  using AccT = int;
+  static AccT const zero = 0;
 };
 
-template<>
+template <>
 struct AccumulationTraits<int> {
-    using AccT = long;
-    static AccT const zero = 0;
+  using AccT = long;
+  static AccT const zero = 0;
 };
 //...

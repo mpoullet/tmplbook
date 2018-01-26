@@ -1,4 +1,4 @@
-template<typename... Types>
+template <typename... Types>
 class Variant {
  public:
   Tuple<Types...> storage;

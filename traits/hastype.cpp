@@ -6,10 +6,8 @@
 DEFINE_HAS_TYPE(value_type);
 DEFINE_HAS_TYPE(char_type);
 
-int main()
-{
-  std::cout << "int::value_type: "
-            << HasTypeT_value_type<int>::value << '\n';
+int main() {
+  std::cout << "int::value_type: " << HasTypeT_value_type<int>::value << '\n';
   std::cout << "std::vector<int>::value_type: "
             << HasTypeT_value_type<std::vector<int>>::value << '\n';
   std::cout << "std::iostream::value_type: "

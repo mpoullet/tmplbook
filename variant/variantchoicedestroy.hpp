@@ -1,4 +1,4 @@
-template<typename T, typename... Types>
+template <typename T, typename... Types>
 bool VariantChoice<T, Types...>::destroy() {
   if (getDerived().getDiscriminator() == Discriminator) {
     // if type matches, call placement delete:

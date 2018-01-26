@@ -1,6 +1,5 @@
-template<typename T>
-class ListNode
-{
+template <typename T>
+class ListNode {
  public:
   T value;
   ListNode<T>* next = nullptr;

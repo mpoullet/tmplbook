@@ -1,10 +1,9 @@
 #include <exception>
 
-class EmptyVariant : public std::exception {
-};
+class EmptyVariant : public std::exception {};
 
-template<typename... Types>
- template<typename T>
+template <typename... Types>
+template <typename T>
 T& Variant<Types...>::get() & {
   if (empty()) {
     throw EmptyVariant();

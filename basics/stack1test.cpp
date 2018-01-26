@@ -1,11 +1,10 @@
-#include "stack1.hpp"
 #include <iostream>
 #include <string>
+#include "stack1.hpp"
 
-int main()
-{
-  Stack<int>         intStack;       // stack of ints
-  Stack<std::string> stringStack;    // stack of strings
+int main() {
+  Stack<int> intStack;             // stack of ints
+  Stack<std::string> stringStack;  // stack of strings
 
   // manipulate int stack
   intStack.push(7);
